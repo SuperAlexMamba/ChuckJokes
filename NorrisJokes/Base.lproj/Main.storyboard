@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ciq-1C-Xlo">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ptm-kj-7OW">
+            <objects>
+                <tabBarController id="Ciq-1C-Xlo" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qnp-VL-JEV">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xfO-Bn-MiA" kind="relationship" relationship="viewControllers" id="9nw-WI-yhm"/>
+                        <segue destination="Xhe-43-kym" kind="relationship" relationship="viewControllers" id="Tg0-gW-l17"/>
+                        <segue destination="RxS-Xe-Tnc" kind="relationship" relationship="viewControllers" id="Nhw-Ym-D3p"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H0r-MG-HLV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-978" y="-150"/>
+        </scene>
+        <!--Download-->
+        <scene sceneID="fRx-QP-Big">
+            <objects>
+                <viewController id="xfO-Bn-MiA" customClass="DownloadJokeController" customModule="NorrisJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ah1-5V-iIa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z74-lX-eGo">
+                                <rect key="frame" x="137" y="431" width="141" height="28.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Download Joke">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="12"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="downloadJoke:" destination="xfO-Bn-MiA" eventType="touchUpInside" id="OzS-En-LgQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JOKE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ail-K5-AQf">
+                                <rect key="frame" x="20" y="282" width="374" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="bxD-OQ-4N9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="sWO-yF-2nE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yDi-lz-sYC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ail-K5-AQf" firstAttribute="top" secondItem="yDi-lz-sYC" secondAttribute="top" constant="234" id="9uF-I5-9j3"/>
+                            <constraint firstItem="z74-lX-eGo" firstAttribute="top" secondItem="Ail-K5-AQf" secondAttribute="bottom" constant="48" id="OvQ-qm-wWH"/>
+                            <constraint firstItem="yDi-lz-sYC" firstAttribute="trailing" secondItem="Ail-K5-AQf" secondAttribute="trailing" constant="20" id="Xui-zY-qQr"/>
+                            <constraint firstItem="Ail-K5-AQf" firstAttribute="leading" secondItem="yDi-lz-sYC" secondAttribute="leading" constant="20" id="Yo5-ae-dLb"/>
+                            <constraint firstItem="yDi-lz-sYC" firstAttribute="trailing" secondItem="z74-lX-eGo" secondAttribute="trailing" constant="136" id="cGQ-Bf-khA"/>
+                            <constraint firstItem="z74-lX-eGo" firstAttribute="leading" secondItem="yDi-lz-sYC" secondAttribute="leading" constant="137" id="o0b-6W-w1T"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Download" image="square.and.arrow.down" catalog="system" id="erM-uy-lQl"/>
+                    <connections>
+                        <outlet property="jokeLabel" destination="Ail-K5-AQf" id="oih-4o-Nyf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q8g-cM-PiT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217.39130434782609" y="-377.00892857142856"/>
+        </scene>
+        <!--Jokes-->
+        <scene sceneID="uez-7t-tdS">
+            <objects>
+                <tableViewController id="dWl-ts-AJi" customClass="JokesViewController" customModule="NorrisJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="xlz-En-AUK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="du4-ru-J26">
+                                <rect key="frame" x="20" y="38" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="du4-ru-J26" id="wBs-58-kjm">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dWl-ts-AJi" id="L4K-9X-Xb0"/>
+                            <outlet property="delegate" destination="dWl-ts-AJi" id="TRs-Fh-Knd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Jokes" id="WfL-5f-ATe"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8hM-Ni-OD9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="358"/>
+        </scene>
+        <!--Joke Categories-->
+        <scene sceneID="sjc-yb-49i">
+            <objects>
+                <tableViewController id="B22-yt-AQn" customClass="CategoriesViewController" customModule="NorrisJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Hhs-T7-CP8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="aG3-qP-wgH">
+                                <rect key="frame" x="20" y="38" width="374" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aG3-qP-wgH" id="BPS-5M-8Ye">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="B22-yt-AQn" id="sra-iK-7Jh"/>
+                            <outlet property="delegate" destination="B22-yt-AQn" id="QpG-bk-HHT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Joke Categories" id="Av5-vu-hBw"/>
+                    <connections>
+                        <segue destination="ufT-Hi-74p" kind="show" identifier="showDetail" id="PFc-uV-k8r"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2nq-R5-gn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648" y="1025"/>
+        </scene>
+        <!--Category-->
+        <scene sceneID="ugM-5L-Lmk">
+            <objects>
+                <tableViewController id="ufT-Hi-74p" customClass="CurrentJokeController" customModule="NorrisJokes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="drE-wc-bQL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="sDB-ro-fpA">
+                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sDB-ro-fpA" id="0ki-LW-RhL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ufT-Hi-74p" id="tVn-1H-Qsd"/>
+                            <outlet property="delegate" destination="ufT-Hi-74p" id="a0W-E2-PUH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Category" id="rbq-vC-q2a"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAj-2U-u99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1490" y="1025"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="pYp-Tq-BhK">
+            <objects>
+                <navigationController id="RxS-Xe-Tnc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Categories" image="square.fill.text.grid.1x2" catalog="system" id="5ix-1o-aH0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="pSb-Li-ak3">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="B22-yt-AQn" kind="relationship" relationship="rootViewController" id="1DT-5b-Ff9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5N-c2-r2i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-242" y="1025"/>
+        </scene>
+        <!--Jokes-->
+        <scene sceneID="ued-Tc-HXU">
+            <objects>
+                <navigationController id="Xhe-43-kym" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Jokes" image="textbox" catalog="system" id="2Z1-Qb-DhB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="67x-av-avZ">
+                        <rect key="frame" x="0.0" y="48" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="dWl-ts-AJi" kind="relationship" relationship="rootViewController" id="GuK-tm-cb7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SKP-kg-NeQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-241" y="358"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="square.and.arrow.down" catalog="system" width="121" height="128"/>
+        <image name="square.fill.text.grid.1x2" catalog="system" width="128" height="99"/>
+        <image name="textbox" catalog="system" width="128" height="89"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
